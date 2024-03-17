@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="mt-3">Category List</h1>
+    <div class="d-flex justify-content-end mt-3">
+        <a [routerLink]="['/admin/categories/create']" class="btn btn-primary">Add Category</a>
+    </div>
+
+<ng-container *ngIf="categories">
+    <table class="table table-borderd mt-3">
+        <thead>
+            <tr>
+                <th>CategoryId</th>
+                <th>CategoryName</th>
+                <th>CategoryDescription</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor ="let category of categories">
+                <td>{{category.categoryId}}</td>
+                <td>{{category.categoryName}}</td>
+                <td>{{category.categoryDescription}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+</div>
